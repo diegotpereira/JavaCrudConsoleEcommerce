@@ -1,13 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/hmtl; charset=UTF-8">
 
-<link rel="stylesheet" href="resources/css/bootstrap.css"/>
-<link rel="stylesheet" href="resources/css/bootstrap-grid.css"/>
-<link rel="stylesheet" href="resources/css/loja.css"/>
+<link href="resources/css/bootstrap.css" rel="stylesheet">
+<link href="resources/css/bootstrap-grid.css" rel="stylesheet">
+<link href="resources/css/loja.css" rel="stylesheet">
+
+
 <title>Loja</title>
 </head>
 

@@ -4,6 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
+
+<link href="resources/css/bootstrap.css" rel="stylesheet">
+<link href="resources/css/bootstrap-grid.css" rel="stylesheet">
+<link href="resources/css/loja.css" rel="stylesheet">
+
 <title>Login</title>
 </head>
 <body style="background-color: #eee">

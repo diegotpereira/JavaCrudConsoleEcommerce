@@ -4,8 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 
-<link rel="stylesheet" href="resources/css/bootstrap.css">
-<link rel="stylesheet" href="resources/css/bootstrap-grid.css">
+<link href="resources/css/bootstrap.css" rel="stylesheet">
+<link href="resources/css/bootstrap-grid.css" rel="stylesheet">
+<link href="resources/css/loja.css" rel="stylesheet">
 
 <title>Home</title>
 </head>
