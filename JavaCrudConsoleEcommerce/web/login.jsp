@@ -17,9 +17,11 @@
 	                    <input class="form-control" type="password" name="senha" placeholder="Digite sua senha">
 	                    </br>
 	                    <input class="btn btn-success" type="submit" name="btnEnviar" value="Enviar">
+						<a class="btn btn-primary" href="#">Cadastrar</a>
 	           </fieldset>
            </form>
         </div>
     </div>
+	<p style="color: red">${erro}</p>
 </body>
 </html>
