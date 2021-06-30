@@ -55,7 +55,7 @@
                     </td>
                 </tr>
             </table>
-            <p style="color: red"
+            <p style="color: red"></p>
         </body>
     </div>
 </div>
