@@ -17,7 +17,7 @@
         <span class="navbar-toggle-icon"></span>
     </button>
 
-    <div class="collaspse navbar-collapse" id="navbarsExampleDefault">
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Produtos
