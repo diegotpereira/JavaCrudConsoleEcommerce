@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import br.com.java.model.Venda;
 
-public class VendasDAO {
+public class VendasDao {
 	
 	public boolean cadastraVenda(Venda venda) {return false;}
 	
