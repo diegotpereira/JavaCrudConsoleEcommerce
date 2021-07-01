@@ -109,6 +109,8 @@ public class Venda {
     public void setIdProduto(Integer idProduto) {
         this.idProduto = idProduto;
     }
+    
+    public Venda() {}
 
 	public Venda(Integer idVenda, String data, String nomeComprador, String cartaoComprador,
 			String codSegurancaComprador, Double valor, Integer idProduto) {
