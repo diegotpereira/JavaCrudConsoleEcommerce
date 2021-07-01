@@ -50,9 +50,9 @@
                 
                 <c:forEach var="produto" items="${listaDeProdutos }">
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>${produto.nome}</td>
+                    <td>${produto.valor}</td>
+                    <td>${produto.descricao}</td>
 
                     <td>
                         <form action="excluirProduto" method="POST">

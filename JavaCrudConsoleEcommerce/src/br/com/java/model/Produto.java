@@ -64,6 +64,8 @@ public class Produto {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+    
+    public Produto() {}
 
 	public Produto(Integer codigo, String nome, Double valor, String descricao) {
 		this.codigo = codigo;

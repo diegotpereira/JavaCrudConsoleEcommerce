@@ -81,7 +81,7 @@ public class UsuarioDao {
 			String sql = "SELECT * FROM tb_usuario WHERE login = ? and senha = ?";
 			
 			// Execute SQL
-			PreparedStatement ps = con.prepareStatement(sql);
+			PreparedStatement ps = con.prepareStatement(sql,ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 			ps.setString(1, usuario.getLogin());
 			ps.setString(2,  usuario.getSenha());
 			
