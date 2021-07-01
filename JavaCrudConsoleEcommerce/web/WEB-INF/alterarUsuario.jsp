@@ -3,7 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+    <link rel="stylesheet" href="resources/css/bootstrap.css">
+    <link rel="stylesheet" href="resources/css/bootstrap-grid.css">
+
+    <script src="resources/js/jquery.js"></script>
+    <script src="resources/js/popper.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
+
 <title>Alterar Usuário</title>
 </head>
 <body>
@@ -26,6 +34,6 @@
             <input type="submit" name="btnEnviar" value="Enviar">
         </fieldset>
     </form>
-    <p style="color: red"></p>
+    <p style="color: red"> ${erro} </p>
 </body>
 </html>

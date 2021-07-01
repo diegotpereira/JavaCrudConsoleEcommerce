@@ -3,11 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<link href="resources/css/bootstrap.css" rel="stylesheet">
-<link href="resources/css/bootstrap-grid.css" rel="stylesheet">
-<link href="resources/css/loja.css" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link href="resources/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/css/bootstrap-grid.css" rel="stylesheet">
+	<link href="resources/css/loja.css" rel="stylesheet">
+	
+	<script src="resources/js/jquery.js"></script>
+	<script src="resources/js/popper.js"></script>
+	<script src="resources/js/bootstrap.js"></script>
 
 <title>Cadastrar Usuário</title>
 </head>
@@ -40,7 +44,7 @@
                             <input type="submit" class="btn btn-success" name="btnEnviar" value="Enviar">
                         </fieldset>
                     </form>
-                    <p style="color: red"></p>
+                    <p style="color: red"> ${erro} </p>
                 </div>
             </div>
         </div>
