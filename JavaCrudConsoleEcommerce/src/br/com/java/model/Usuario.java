@@ -94,6 +94,8 @@ public class Usuario {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+    
+    public Usuario() {}
 
 	public Usuario(String login, String senha, String nome, String cpf, String telefone, String endereco) {
 		this.login = login;

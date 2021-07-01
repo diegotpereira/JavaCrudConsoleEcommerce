@@ -12,10 +12,10 @@ public class ConnectionFactory {
 		
 		try {
 			String servidorNome= "localhost";
-			String bancoDeDadosNome = "dbJavaCrudConsoleEcommerce";
+			String bancoDeDadosNome = "dbJavaCrudConsoleEcommerce?serverTimezone=UTC";
 			String usuario = "root";
 			String senha = "root";
-			String driverNome = "com.mysql.jdbc.Driver";
+			String driverNome = "com.mysql.cj.jdbc.Driver";
 			Class.forName(driverNome);
 			
 			String url = "jdbc:mysql://" + servidorNome + "/" + bancoDeDadosNome;
