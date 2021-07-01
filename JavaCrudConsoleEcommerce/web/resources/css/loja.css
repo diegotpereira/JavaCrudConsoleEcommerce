@@ -52,3 +52,10 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+/* Div cadastrar Usuário */
+.centralizar-pagina-cadastrar {
+	margin-top: 20vh;
+	margin-left: 40vw;
+	margin-right: 40vw;
+}

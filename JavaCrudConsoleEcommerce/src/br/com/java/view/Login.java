@@ -32,7 +32,7 @@ public class Login extends HttpServlet {
 		usuario.setLogin(request.getParameter("usuario"));
 		usuario.setSenha(request.getParameter("senha"));
 		
-		String page = "loja.jsp";
+		String page = "index.jsp";
 		
 		UsuarioDao dao = new UsuarioDao();
 		
