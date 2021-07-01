@@ -4,7 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link href="resources/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/css/bootstrap-grid.css" rel="stylesheet">
+	<link href="resources/css/loja.css" rel="stylesheet">
+	
+	<script src="resources/js/jquery.js"></script>
+	<script src="resources/js/popper.js"></script>
+	<script src="resources/js/bootstrap.js"></script>
+	
 <title>Listar Produtos</title>
 </head>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -38,7 +47,8 @@
                     <td>Descrição do Produto</td>
                     <td>Ações</td>
                 </tr>
-
+                
+                <c:forEach var="produto" items="${listaDeProdutos }">
                 <tr>
                     <td></td>
                     <td></td>
@@ -54,8 +64,9 @@
                         </form>
                     </td>
                 </tr>
+                </c:forEach>
             </table>
-            <p style="color: red"></p>
+            <p style="color: red"> ${erro} </p>
         </body>
     </div>
 </div>
