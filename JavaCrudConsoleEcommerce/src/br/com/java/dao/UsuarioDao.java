@@ -15,6 +15,8 @@ public class UsuarioDao {
 	public boolean cadastraUsuario(Usuario usuario) {
 		
 		String sql = "INSERT INTO tb_usuario" + "(login, senha, nome, cpf, telefone, endereco) VALUES " + "(?,?,?,?,?,?);";
+		
+		//Execute SQL
 		PreparedStatement prepareStatement;
 		
 		try {
