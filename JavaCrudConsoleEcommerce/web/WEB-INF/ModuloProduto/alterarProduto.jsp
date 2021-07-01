@@ -3,7 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/css/bootstrap-grid.css" rel="stylesheet">
+	<link href="resources/css/loja.css" rel="stylesheet">
+	
+	<script src="resources/js/jquery.js"></script>
+	<script src="resources/js/popper.js"></script>
+	<script src="resources/js/bootstrap.js"></script>
+	
 <title>Insert title here</title>
 </head>
 <div class="row">
@@ -37,19 +45,19 @@
                 <div class="col-md-12">
                     <h4>Cadastrar novo produto</h4>
                     <form action="alterarProduto" method="POST">
-                        <input type="hidden" name="idProduto" value=""/>
+                        <input type="hidden" name="idProduto" value="${produto.codigo }"/>
                         <div class="form-group">
-                            <input class="form-control" type="text" value="" name="nome" placeholder="Digite o nome do produto" autofocus/>
+                            <input class="form-control" type="text" value="${produto.nome }" name="nome" placeholder="Digite o nome do produto" autofocus/>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="text" value="" name="valor" placeholder="Digite o valor do produto"/>
+                            <input class="form-control" type="text" value="${produto.valor }" name="valor" placeholder="Digite o valor do produto"/>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="text" value="" name="descricao" placeholder="Digite a descrição do produto"/>
+                            <input class="form-control" type="text" value="${produto.descricao }" name="descricao" placeholder="Digite a descrição do produto"/>
                         </div>
                         <input type="submit" class="btn btn-success" name="btnEnviar" value="Enviar">
                     </form>
-                    <p style="color: red"></p>
+                    <p style="color: red"> ${erro} </p>
                 </div>
             </div>
         </div>

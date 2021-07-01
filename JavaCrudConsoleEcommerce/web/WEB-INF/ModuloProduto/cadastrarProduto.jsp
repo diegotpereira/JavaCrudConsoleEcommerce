@@ -3,7 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/css/bootstrap-grid.css" rel="stylesheet">
+	<link href="resources/css/loja.css" rel="stylesheet">
+	
+	<script src="resources/js/jquery.js"></script>
+	<script src="resources/js/popper.js"></script>
+	<script src="resources/js/bootstrap.js"></script>
+	
 <title>Cadastrar Produto</title>
 </head>
 <div class="row">

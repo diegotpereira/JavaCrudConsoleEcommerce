@@ -2,6 +2,7 @@ package br.com.java.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import br.com.java.db.ConnectionFactory;
@@ -9,19 +10,89 @@ import br.com.java.model.Produto;
 
 public class ProdutoDao {
 	
-	public boolean cadastraProduto(Produto produto) {return false;}
+	public boolean cadastraProduto(Produto produto) {
+		
+		String sql = "INSERT INTO tb_produto" + "(nome, valor, descricao) VALUES " + " (?,?,?); ";
+		PreparedStatement preparedStatement;
+		
+		try {
+			
+			preparedStatement = ConnectionFactory.getConnection().prepareStatement(sql);
+			preparedStatement.setString(1, produto.getNome());
+			preparedStatement.setDouble(2, produto.getValor());
+			preparedStatement.setString(3, produto.getDescricao());
+			
+			preparedStatement.executeUpdate();
+			
+			return true;
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			
+			return false;
+		}
+	}
 	
-	public boolean alteraProduto(Produto produto) {return false;}
+	public boolean alteraProduto(Produto produto) {
+		
+		String sql = "UPDATE tb_produto SET nome = ?, valor = ?, descricao = ? " + "WHERE idProduto = ?; ";
+		
+		// Execute SQL
+		PreparedStatement preparedStatement;
+		
+		try {
+			preparedStatement = ConnectionFactory.getConnection().prepareStatement(sql);
+			preparedStatement.setString(1, produto.getNome());
+			preparedStatement.setDouble(2, produto.getValor());
+			preparedStatement.setString(3, produto.getDescricao());
+			preparedStatement.setInt(4, produto.getCodigo());
+			
+			preparedStatement.executeUpdate();
+			
+			return true;
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			
+			return false;
+		}
+	}
 	
-	public boolean excluiProduto(Integer toDelete) {return false;}
+	public boolean excluiProduto(Integer toDelete) {
+		
+		String sql = "DELETE FROM tb_produto WHERE idProduto = ?; ";
+		
+		// Execute SQL
+		PreparedStatement preparedStatement;
+		
+		try {
+			
+			preparedStatement = ConnectionFactory.getConnection().prepareStatement(sql);
+			preparedStatement.setInt(1, toDelete);
+			preparedStatement.executeUpdate();
+			
+			return true;
+			
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			
+			return false;
+		}
+	}
 	
 	public Produto procuraProdutoPeloId(Integer idProduto) {
 		
 		try {
 			
 			String sql = "SELECT * FROM tb_produto WHERE idProduto = ? ;";
+			
+			// Execute SQL
 			PreparedStatement con = ConnectionFactory.getConnection().prepareStatement(sql);
 			
+			// Apresentando resultado SQL
 			con.setInt(1, idProduto);
 			ResultSet rs = con.executeQuery();
 			Produto produto = new Produto();
