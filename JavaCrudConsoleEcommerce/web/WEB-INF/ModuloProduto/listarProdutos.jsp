@@ -56,11 +56,12 @@
 
                     <td>
                         <form action="excluirProduto" method="POST">
-                            <input type="hidden" name="idProduto" value=""/>
-                            <input type="submit" class="btn btn-danger" value="Excluir">
+                            <input type="hidden" name="idProduto" value="${produto.codigo}"/>
+                            <input type="submit" class="btn btn-danger" value="Excluir Produto">
                         </form>
                         <form action="alterarProduto" method="GET">
-                            <input type="hidden" name="idProduto" value=""/>
+                            <input type="hidden" name="idProduto" value="${produto.codigo }"/>
+                            <input type="submit" class="btn btn-warning" value="Alterar Produto"/>
                         </form>
                     </td>
                 </tr>
