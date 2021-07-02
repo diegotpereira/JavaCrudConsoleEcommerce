@@ -6,14 +6,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/hmtl; charset=UTF-8">
-
-<link href="resources/css/bootstrap.css" rel="stylesheet">
-<link href="resources/css/bootstrap-grid.css" rel="stylesheet">
-<link href="resources/css/loja.css" rel="stylesheet">
-
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link href="resources/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/css/bootstrap-grid.css" rel="stylesheet">
+	<link href="resources/css/loja.css" rel="stylesheet">
+	
+	<script src="resources/js/jquery.js"></script>
+	<script src="resources/js/popper.js"></script>
+	<script src="resources/js/bootstrap.js"></script>
 
 <title>Loja</title>
+
 </head>
 
 <nav class="navbar navbar-expand-md navbar-darkbg-dark fixed-top">
@@ -27,8 +31,8 @@
 
         </ul>
         <ul class="navbar-nav">
-            <li class="navb-item active">
-                <a class="nav-link" href="login">Entrar<span class="sr-only"></a>
+            <li class="nav-item active">
+                <a class="nav-link" href="login">Entrar<span class="sr-only">(current)</span></a>
             </li>
         </ul>
     </div>
@@ -40,25 +44,27 @@
 
             <div class="col-md-10 centering">
                 <div class="row">
+                <c:forEach var="produto" items = "${listaDeProdutos }">
                     <div class="produto-thumb">
                         <div>
                             <a href="#" class="thumbnail">
-                                <img height="200" width="200" src="" alt="">
+                                <img height="200" width="200" src="resources/images/produto.png" alt="${ produto.nome }">
                             </a>
-                            <h5>Produto Nome</h5>
-                            <div class="preco">Preço</div>
-                            <div class="descricao">Descrição</div>
+                            <h5>${ produto.nome }</h5>
+                            <div class="preco">R$ ${ produto.valor }</div>
+                            <div class="descricao">${ produto.descricao }</div>
                             <form method="GET" action="comprar">
                                 <div class="center">
-                                    <input type="hidden" name="idProduto" value=""/>
+                                    <input type="hidden" name="idProduto" value="${ produto.codigo }"/>
                                     <input type="submit" class="btn btn-success comprar" value="Comprar Agora"/>
                                 </div>
                             </form>
                         </div>
                     </div>
+                 </c:forEach>   
                 </div>
             </div>
-            <p style="color: red;"></p>
+            <p style="color: red"> ${erro} </p>
         </div>
     </div>
 </body>
