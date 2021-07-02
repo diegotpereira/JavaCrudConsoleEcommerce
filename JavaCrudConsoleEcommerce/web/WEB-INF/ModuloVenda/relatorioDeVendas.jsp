@@ -1,9 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link href="resources/css/bootstrap.css" rel="stylesheet">
+	<link href="resources/css/bootstrap-grid.css" rel="stylesheet">
+	<link href="resources/css/loja.css" rel="stylesheet">
+	
+	<script src="resources/js/jquery.js"></script>
+	<script src="resources/js/popper.js"></script>
+	<script src="resources/js/bootstrap.js"></script>
+
 <title>Insert title here</title>
 </head>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -37,15 +47,19 @@
                 <td>Cod Segurança</td>
                 <td>Valor da Venda</td>
             </tr>
+            
+            <c:forEach var="venda" items="${listaDeVendas }">
+            
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>${venda.nomeComprador }</td>
+                <td>${ venda.data }</td>
+                <td>${ venda.cartaoComprador }</td>
+                <td>${ venda.codSegurancaComprador }</td>
+                <td>${ venda.valor }</td>
             </tr>
+            </c:forEach>
         </table>
-        <p style="color: red"></p>
+        <p style="color: red"> ${ erro }</p>
     </body>
 </div>
 </html>
