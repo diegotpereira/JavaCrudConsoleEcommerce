@@ -24,6 +24,7 @@ public class VendasDao {
 			preparedStatement.setString(3, produto.getCartaoComprador());
 			preparedStatement.setString(4, produto.getCodSegurancaComprador());
 			preparedStatement.setDouble(5, produto.getValor());
+			preparedStatement.setDouble(6, produto.getIdProduto());
 			
 			preparedStatement.executeUpdate();
 			
@@ -51,6 +52,7 @@ public class VendasDao {
 			preparedStatement.setString(3, produto.getCartaoComprador());
 			preparedStatement.setString(4, produto.getCodSegurancaComprador());
 			preparedStatement.setDouble(5, produto.getValor());
+			preparedStatement.setDouble(6, produto.getIdProduto());
 			preparedStatement.setDouble(6, produto.getIdVenda());
 			
 			preparedStatement.executeUpdate();
